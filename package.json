@@ -20,6 +20,9 @@
     "license": "MIT",
     "bugs": {
       "url": "https://github.com/primefaces/primereact-sass-theme/issues"
+    },
+    "devDependencies": {
+      "sass": "^1.69.7"
     }
   }
   

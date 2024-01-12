@@ -1,0 +1,46 @@
+@use '../variables' as lucuma;
+@use 'theme-vars' as tvars;
+
+@use '../../arya/arya-blue/theme' with ($fontFamily: lucuma.$fontFamily,
+  $fontSize: lucuma.$fontSize,
+  $borderRadius: lucuma.$borderRadius,
+  $inputPadding: lucuma.$inputPadding,
+  $inputListItemPadding: lucuma.$inputListItemPadding,
+  $tableHeaderCellBg: lucuma.$tableHeaderCellBg,
+  $buttonIconOnlyPadding: lucuma.$buttonIconOnlyPadding,
+  $buttonIconOnlyWidth: lucuma.$buttonIconOnlyWidth,
+  $buttonPadding: lucuma.$buttonPadding,
+  $dangerButtonBg: lucuma.$dangerButtonBg,
+  $successButtonBg: lucuma.$successButtonBg,
+
+  $errorMessageBg: lucuma.$errorMessageBg,
+  $errorMessageTextColor: lucuma.$errorMessageTextColor,
+  $errorMessageIconColor: lucuma.$errorMessageIconColor,
+  $warningMessageBg: lucuma.$warningMessageBg,
+  $warningMessageTextColor: lucuma.$warningMessageTextColor,
+  $warningMessageIconColor: lucuma.$warningMessageIconColor,
+
+  $tooltipBg: lucuma.$tooltipBg,
+  $dialogContentPadding: lucuma.$dialogContentPadding,
+  $dialogFooterPadding: lucuma.$dialogFooterPadding,
+
+  // theme specific overrides
+  $primaryColor: hsl(206, 66.7%, 38.8%), // from button active color in current explore
+  $primaryTextColor: hsla(0, 0%, 100%, 0.87),
+  $secondaryButtonBg: tvars.$secondaryButtonBg,
+  $secondaryButtonHoverBg: tvars.$secondaryButtonHoverBg,
+  $secondaryButtonActiveBg: tvars.$secondaryButtonActiveBg,
+  $dangerButtonTextColor: tvars.$dangerButtonTextColor,
+  $successButtonTextColor: tvars.$successButtonTextColor,
+
+  $toggleButtonBg: tvars.$toggleButtonBg,
+  $toggleButtonHoverBg: tvars.$toggleButtonHoverBg,
+
+  $checkboxActiveBg: unset,
+  $checkboxActiveBorderColor: unset,
+  $checkboxActiveHoverBg: unset,
+
+  $disabledOpacity: .5,
+);
+
+@import "../overrides";

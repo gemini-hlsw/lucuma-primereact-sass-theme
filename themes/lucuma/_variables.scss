@@ -1,0 +1,30 @@
+// Add variables common to both light and dark themes here, then use them in the individual
+// `theme.scss` files.
+$fontName: "Lato";
+$fontFamily: $fontName, "Helvetica Neue", Arial, Helvetica, sans-serif;
+$fontSize: 1em;
+$borderRadius: 4px;
+$inputPadding: 0.25rem 0.5rem;
+$inputListItemPadding: 0.15rem 0.5rem;
+$tableHeaderCellBg: var(--surface-100);
+$buttonPadding: 0.78571429em 0.78571429em;
+$buttonIconOnlyPadding: 0.78571429em 0.78571429em;
+$buttonIconOnlyWidth: initial;
+$successButtonBg: #4caf50; // this is --green-500, but can't use the var because of color calculations
+$dangerButtonBg: #ff6459; // this is --red-400, but can't use the var because of color calculations
+
+$errorMessageBg: #b32d23; // this is --red-700
+$errorMessageTextColor: #ffffff;
+$errorMessageIconColor: $errorMessageTextColor;
+$warningMessageBg: #d5a326; // this is --yellow-600
+$warningMessageTextColor: #ffffff;
+$warningMessageIconColor: $warningMessageTextColor;
+
+$tooltipBg: var(--surface-ground);
+$tooltipTextColor: var(--text-color);
+
+// remove the bottom padding on the dialog and have the footer add it because the content scrollbars look
+// odd otherwise. For dialogs without a footer, extra css can be used, or a empty div for the footer
+// might look better with scrolling content.
+$dialogContentPadding: 0 1.5rem;
+$dialogFooterPadding: 1rem 1.5rem;
