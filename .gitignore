@@ -95,3 +95,4 @@ publish/src/main/resources/lucuma-css/*
 .vscode/
 target/
 metals.sbt
+.direnv
