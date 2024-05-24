@@ -1,0 +1,5 @@
+@use '../../saga/saga-blue/variables';
+
+// In the `use...with...` in `theme.scss`, there is no access to the variables from 
+// the above theme, so we need to do the setting of variables here where we have access.
+// Here, we can also set variables from other variables, which can't be done in theme.scss
