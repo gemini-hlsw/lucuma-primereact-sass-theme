@@ -1,3 +1,9 @@
+# Original
+theme.css
+.DS_STORE
+node_modules/
+build/
+
 # Logs
 logs
 *.log

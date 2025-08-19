@@ -1,6 +1,6 @@
 {
     "name": "primereact-sass-theme",
-    "version": "10.6.6",
+    "version": "10.8.5",
     "description": "PrimeReact Sass Theme",
     "homepage": "https://primereact.org/",
     "repository": {
@@ -21,8 +21,13 @@
     "bugs": {
       "url": "https://github.com/primefaces/primereact-sass-theme/issues"
     },
+    "scripts": {
+      "sass-watch": "sass src/assets:src/assets --watch --no-source-map",
+      "sass": "sass .:build --no-source-map",
+      "build": "npm run sass"
+    },
     "devDependencies": {
-      "sass": "^1.69.7"
+      "sass": "latest"
     }
   }
   
