@@ -3,60 +3,6 @@ import scala.sys.process._
 ThisBuild / tlBaseVersion := "0.3"
 ThisBuild / tlCiReleaseBranches := Seq("main")
 
-ThisBuild / organization := "edu.gemini"
-ThisBuild / organizationName := "Association of Universities for Research in Astronomy, Inc. (AURA)"
-ThisBuild / licenses += ((
-  "BSD-3-Clause",
-  url("https://opensource.org/licenses/BSD-3-Clause")
-))
-ThisBuild / homepage := Some(
-  url("https://github.com/gemini-hlsw/lucuma-primereact-designer")
-)
-ThisBuild / developers := List(
-  Developer(
-    "cquiroz",
-    "Carlos Quiroz",
-    "cquiroz@gemini.edu",
-    url("http://www.gemini.edu")
-  ),
-  Developer(
-    "jluhrs",
-    "Javier Lührs",
-    "jluhrs@gemini.edu",
-    url("http://www.gemini.edu")
-  ),
-  Developer(
-    "sraaphorst",
-    "Sebastian Raaphorst",
-    "sraaphorst@gemini.edu",
-    url("http://www.gemini.edu")
-  ),
-  Developer(
-    "swalker2m",
-    "Shane Walker",
-    "swalker@gemini.edu",
-    url("http://www.gemini.edu")
-  ),
-  Developer(
-    "tpolecat",
-    "Rob Norris",
-    "rnorris@gemini.edu",
-    url("http://www.tpolecat.org")
-  ),
-  Developer(
-    "rpiaggio",
-    "Raúl Piaggio",
-    "rpiaggio@gemini.edu",
-    url("http://www.gemini.edu")
-  ),
-  Developer(
-    "toddburnside",
-    "Todd Burnside",
-    "tburnside@gemini.edu",
-    url("http://www.gemini.edu")
-  )
-)
-
 lazy val setupNode = WorkflowStep.Use(
   UseRef.Public("actions", "setup-node", "v3"),
   name = Some("Use Node.js"),
@@ -71,6 +17,8 @@ lazy val npmInstall = WorkflowStep.Run(
 
 ThisBuild / tlCiMimaBinaryIssueCheck := false
 ThisBuild / tlCiDocCheck := false
+ThisBuild / tlCiScalafmtCheck := false
+ThisBuild / tlCiHeaderCheck := false
 ThisBuild / githubWorkflowJavaVersions := Seq(JavaSpec.temurin("21"))
 ThisBuild / githubWorkflowBuildPreamble ++= Seq(setupNode, npmInstall)
 ThisBuild / githubWorkflowPublishPreamble ++= Seq(setupNode, npmInstall)
