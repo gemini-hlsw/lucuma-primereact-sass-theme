@@ -1,4 +1,13 @@
+@import '../../theme-base/_mixins';
+
 // Overrides. There's no variable to set this just for one component.
 .p-accordion .p-accordion-header:not(.p-disabled) .p-accordion-header-link:focus {
   box-shadow: none;
+}
+
+// Extend disabled border color to input addons.
+.p-inputgroup {
+  .p-invalid.p-component ~ .p-inputgroup-addon {
+    @include invalid-input();
+  }
 }

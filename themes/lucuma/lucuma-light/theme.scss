@@ -1,5 +1,6 @@
 @use "../variables" as lucuma;
 @use "theme-vars" as tvars;
+@use "../../saga/saga-blue/_variables" as baseVars;
 
 @use "../../saga/saga-blue/theme" with (
   $fontFamily: lucuma.$fontFamily,
@@ -27,4 +28,5 @@
   $dialogFooterPadding: lucuma.$dialogFooterPadding
 );
 
+$inputErrorBorderColor: baseVars.$inputErrorBorderColor;
 @import "../overrides";
