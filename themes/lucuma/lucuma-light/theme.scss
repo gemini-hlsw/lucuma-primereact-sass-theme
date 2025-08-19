@@ -28,6 +28,5 @@
   $dialogFooterPadding: lucuma.$dialogFooterPadding
 );
 
-// @use "../overrides" with ($inputErrorBorderColor: baseVars.$inputErrorBorderColor);
 $inputErrorBorderColor: baseVars.$inputErrorBorderColor;
 @import "../overrides";

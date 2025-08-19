@@ -44,7 +44,5 @@
   $disabledOpacity: .5,
 );
 
-// @use "../overrides" with ($inputErrorBorderColor: baseVars.$inputErrorBorderColor);
-// @use "../overrides" with ($inputErrorBorderColor: #ff5757);
 $inputErrorBorderColor: baseVars.$inputErrorBorderColor;
 @import "../overrides";
