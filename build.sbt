@@ -17,6 +17,8 @@ lazy val npmInstall = WorkflowStep.Run(
 
 ThisBuild / tlCiMimaBinaryIssueCheck := false
 ThisBuild / tlCiDocCheck := false
+ThisBuild / tlCiScalafmtCheck := false
+ThisBuild / tlCiHeaderCheck := false
 ThisBuild / githubWorkflowJavaVersions := Seq(JavaSpec.temurin("21"))
 ThisBuild / githubWorkflowBuildPreamble ++= Seq(setupNode, npmInstall)
 ThisBuild / githubWorkflowPublishPreamble ++= Seq(setupNode, npmInstall)

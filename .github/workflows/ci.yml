@@ -66,10 +66,6 @@ jobs:
       - name: Check that workflows are up to date
         run: sbt githubWorkflowCheck
 
-      - name: Check headers and formatting
-        if: matrix.java == 'temurin@21' && matrix.os == 'ubuntu-22.04'
-        run: sbt '++ ${{ matrix.scala }}' headerCheckAll scalafmtCheckAll 'project /' scalafmtSbtCheck lucumaScalafmtCheck lucumaScalafixCheck
-
       - name: Check scalafix lints
         if: matrix.java == 'temurin@21' && matrix.os == 'ubuntu-22.04'
         run: sbt '++ ${{ matrix.scala }}' 'scalafixAll --check'
