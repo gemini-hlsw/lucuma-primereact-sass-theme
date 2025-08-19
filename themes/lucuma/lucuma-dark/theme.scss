@@ -1,5 +1,6 @@
 @use '../variables' as lucuma;
 @use 'theme-vars' as tvars;
+@use "../../arya/arya-blue/_variables" as baseVars;
 
 @use '../../arya/arya-blue/theme' with ($fontFamily: lucuma.$fontFamily,
   $fontSize: lucuma.$fontSize,
@@ -43,4 +44,7 @@
   $disabledOpacity: .5,
 );
 
+// @use "../overrides" with ($inputErrorBorderColor: baseVars.$inputErrorBorderColor);
+// @use "../overrides" with ($inputErrorBorderColor: #ff5757);
+$inputErrorBorderColor: baseVars.$inputErrorBorderColor;
 @import "../overrides";
