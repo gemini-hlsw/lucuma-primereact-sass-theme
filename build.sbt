@@ -1,6 +1,6 @@
 import scala.sys.process._
 
-ThisBuild / tlBaseVersion := "0.4"
+ThisBuild / tlBaseVersion := "0.5"
 ThisBuild / tlCiReleaseBranches := Seq("main")
 
 lazy val setupNode = WorkflowStep.Use(
