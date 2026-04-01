@@ -23,8 +23,8 @@ ThisBuild / githubWorkflowJavaVersions := Seq(JavaSpec.temurin("21"))
 ThisBuild / githubWorkflowBuildPreamble ++= Seq(setupNode, npmInstall)
 ThisBuild / githubWorkflowPublishPreamble ++= Seq(setupNode, npmInstall)
 
-ThisBuild / scalaVersion := "3.8.2"
-ThisBuild / crossScalaVersions := Seq("3.8.2")
+ThisBuild / scalaVersion := "3.8.3"
+ThisBuild / crossScalaVersions := Seq("3.8.3")
 
 Global / onChangedBuildSource := ReloadOnSourceChanges
 
